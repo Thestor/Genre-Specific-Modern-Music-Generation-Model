@@ -1,2 +1,2 @@
-# Genre-Specific-Modern-Music-Generation-Model
+# Genre Specific Modern Music Generation Model
 For Thesis
