@@ -49,14 +49,14 @@ class MusicGeneration:
         vol = prob[n, -1]
         prob = apply_temperature(prob[n, :-1], self.temperature)
 
-        ## Flip notes randomly
-        #if np.random.random() <= prob[0]:
-        #    self.next_note[n, 0] = 1
-        #    # Apply volume
-        #    self.next_note[n, 2] = vol
-        #    # Flip articulation
-        #    if np.random.random() <= prob[1]:
-        #        self.next_note[n, 1] = 1
+        # Flip notes randomly
+        if np.random.random() <= prob[0]:
+            self.next_note[n, 0] = 1
+            # Apply volume
+            self.next_note[n, 2] = vol
+            # Flip articulation
+            if np.random.random() <= prob[1]:
+                self.next_note[n, 1] = 1
 
     def end_time(self, t):
         """
